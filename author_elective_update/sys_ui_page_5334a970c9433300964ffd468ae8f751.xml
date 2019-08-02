@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="DELETE">
+        <category>general</category>
+        <client_script><![CDATA[//1 ui page]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_srtestapp01_uipage100.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+
+</j:jelly>]]></html>
+        <name>uipage100</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-01 09:09:14</sys_created_on>
+        <sys_id>5334a970c9433300964ffd468ae8f751</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>uipage100</sys_name>
+        <sys_package display_value="srtestApp01" source="x_srtestapp01">b1da4134c9033300964ffd468ae8f732</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="srtestApp01">b1da4134c9033300964ffd468ae8f732</sys_scope>
+        <sys_update_name>sys_ui_page_5334a970c9433300964ffd468ae8f751</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-01 09:14:56</sys_updated_on>
+    </sys_ui_page>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="srtestApp01">b1da4134c9033300964ffd468ae8f732</application>
+        <file_path/>
+        <instance_id>471181341b0b3304900fecadee4bcbeb</instance_id>
+        <instance_name>glide_db_dump</instance_name>
+        <name>sys_ui_page_5334a970c9433300964ffd468ae8f751</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_page"&gt;&lt;sys_ui_page action="INSERT_OR_UPDATE"&gt;&lt;category&gt;general&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[//1 ui page]]&gt;&lt;/client_script&gt;&lt;description/&gt;&lt;direct&gt;false&lt;/direct&gt;&lt;endpoint&gt;x_srtestapp01_uipage100.do&lt;/endpoint&gt;&lt;html&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null"&gt;
+
+&lt;/j:jelly&gt;]]&gt;&lt;/html&gt;&lt;name&gt;uipage100&lt;/name&gt;&lt;processing_script/&gt;&lt;sys_class_name&gt;sys_ui_page&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-08-01 09:09:14&lt;/sys_created_on&gt;&lt;sys_id&gt;5334a970c9433300964ffd468ae8f751&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;uipage100&lt;/sys_name&gt;&lt;sys_package display_value="srtestApp01" source="x_srtestapp01"&gt;b1da4134c9033300964ffd468ae8f732&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="srtestApp01"&gt;b1da4134c9033300964ffd468ae8f732&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_page_5334a970c9433300964ffd468ae8f751&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-08-01 09:14:56&lt;/sys_updated_on&gt;&lt;/sys_ui_page&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>2005114734</payload_hash>
+        <record_name>uipage100</record_name>
+        <reverted_from/>
+        <source>7dda8d74c9033300964ffd468ae8f7ca</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-01 09:14:56</sys_created_on>
+        <sys_id>d195e1b0c9433300964ffd468ae8f7b4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16c4c75fd850000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-01 09:14:56</sys_updated_on>
+        <type>UI Page</type>
+        <update_guid>5d95e1b0d9433300f73deb032ad55fb3</update_guid>
+        <update_guid_history>5d95e1b0d9433300f73deb032ad55fb3:2005114734,a94429707d43330080eaef127e4e7780:1393740265</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-01 09:15:05</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_page">sys_ui_page</sys_db_object>
+        <sys_id>1ea845aa1737431896752865a4a94e90</sys_id>
+        <sys_metadata>5334a970c9433300964ffd468ae8f751</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>uipage100</sys_name>
+        <sys_package display_value="srtestApp01" source="x_srtestapp01">b1da4134c9033300964ffd468ae8f732</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="srtestApp01">b1da4134c9033300964ffd468ae8f732</sys_scope>
+        <sys_scope_delete display_value="">1d4aad98da244550b11820b8a17f1440</sys_scope_delete>
+        <sys_update_name>sys_ui_page_5334a970c9433300964ffd468ae8f751</sys_update_name>
+        <sys_update_version display_value="sys_ui_page_5334a970c9433300964ffd468ae8f751">d195e1b0c9433300964ffd468ae8f7b4</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-01 09:15:05</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

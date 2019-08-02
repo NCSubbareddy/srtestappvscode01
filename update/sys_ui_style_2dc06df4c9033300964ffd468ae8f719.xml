@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_style">
+    <sys_ui_style action="INSERT_OR_UPDATE">
+        <alt/>
+        <element/>
+        <name>style12</name>
+        <style>  width:400px&#13;
+&#13;
+}&#13;
+&#13;
+</style>
+        <sys_class_name>sys_ui_style</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-01 08:53:55</sys_created_on>
+        <sys_id>2dc06df4c9033300964ffd468ae8f719</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>style12</sys_name>
+        <sys_package display_value="srtestApp01" source="x_srtestapp01">b1da4134c9033300964ffd468ae8f732</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="srtestApp01">b1da4134c9033300964ffd468ae8f732</sys_scope>
+        <sys_update_name>sys_ui_style_2dc06df4c9033300964ffd468ae8f719</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-01 09:07:15</sys_updated_on>
+        <value/>
+    </sys_ui_style>
+    <sys_translated_text action="delete_multiple" query="documentkey=2dc06df4c9033300964ffd468ae8f719"/>
+</record_update>

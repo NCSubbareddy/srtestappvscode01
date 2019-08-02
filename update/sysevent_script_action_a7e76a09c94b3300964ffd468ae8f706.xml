@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_script_action">
+    <sysevent_script_action action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <condition_script/>
+        <description/>
+        <event_name>alm_transfer_order_line_subtask.escalati</event_name>
+        <name>scriptaction21</name>
+        <order>100</order>
+        <script><![CDATA[knowledgeView();
+function knowledgeView() {
+  var kv = new GlideRecord("kb_use");
+  kv.initialize();
+  kv.used = true;
+  kv.user.setValue(event.parm2);
+  kv.article = event.instance;
+  var params = JSON.parse(event.parm1);
+  kv.session_id = params.glideSessionId;
+  if(params.hasOwnProperty("ts_query_id")){
+	  kv.search_id = params.ts_query_id;
+  }
+  if(params.hasOwnProperty("domainId")){
+	  kv.sys_domain = params.domainId;
+  }
+  kv.insert();
+  incrementUseCount(event.instance);
+}
+
+function incrementUseCount(article){
+	var gr = new GlideRecord('kb_knowledge');
+	if(gr.get(article)){
+		var currentCount = gr.getValue('use_count');
+		if(!currentCount)
+			currentCount = 0;
+		gr.setValue('use_count',parseInt(currentCount)+1);
+		gr.setSystem(true);
+		gr.setWorkflow(false);
+		gr.update();
+	}
+	//comment is added...
+}]]></script>
+        <synchronous>false</synchronous>
+        <sys_class_name>sysevent_script_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-02 08:43:18</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a7e76a09c94b3300964ffd468ae8f706</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>scriptaction21</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="srtestApp01" source="x_srtestapp01">b1da4134c9033300964ffd468ae8f732</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="srtestApp01">b1da4134c9033300964ffd468ae8f732</sys_scope>
+        <sys_update_name>sysevent_script_action_a7e76a09c94b3300964ffd468ae8f706</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-02 08:46:29</sys_updated_on>
+    </sysevent_script_action>
+</record_update>

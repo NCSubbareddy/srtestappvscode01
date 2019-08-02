@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <before>false</before>
+        <description/>
+        <flush_cache>false</flush_cache>
+        <name>fixscriptvscode01</name>
+        <record_for_rollback>false</record_for_rollback>
+        <run_once>true</run_once>
+        <script><![CDATA[(function() {
+	var gr = new GlideRecord('sys_sg_item_view');
+	gr.query();
+	while (gr.next()) {
+		var itemViewJson = gr.getValue('item_view_json');
+		if (!itemViewJson)
+			continue;
+
+		try {
+			var elementProcessor = new ItemViewElementProcessor();
+			var item_view_json = elementProcessor.identifyItemViewElements(itemViewJson);
+			gr.setValue('item_view_json', item_view_json);
+			setDependencyFields(gr, item_view_json);
+			var result = gr.update('Add identifiers to item view JSON');
+			if (result)
+				gs.warn(gs.getMessage('ItemView {0} updated successfully', gr.getUniqueValue()));
+		} catch (err) {
+			gs.warn(gs.getMessage('Error while processing ItemView {0}: {1}', [gr.getUniqueValue(), err.message]));
+		}
+	}
+
+	gs.warn(gs.getMessage('Execution finished'));
+	
+	function setDependencyFields(glideRecord, item_view_json){
+		elementList = elementProcessor.getItemViewElementsIds(item_view_json);
+		var dependency_fields = [];
+		for(var index=0;index<elementList.length;index++) {
+			if(!elementList[index].cellId)
+				continue;
+			
+			dependency_fields.push(elementList[index].cellId+"-"+elementList[index].id);
+		}
+		glideRecord.dependency_fields = dependency_fields.join(",");
+	}	
+	//comment is added..
+})();
+]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-02 08:38:59</sys_created_on>
+        <sys_id>58f6a209c94b3300964ffd468ae8f71e</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>fixscriptvscode01</sys_name>
+        <sys_package display_value="srtestApp01" source="x_srtestapp01">b1da4134c9033300964ffd468ae8f732</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="srtestApp01">b1da4134c9033300964ffd468ae8f732</sys_scope>
+        <sys_update_name>sys_script_fix_58f6a209c94b3300964ffd468ae8f71e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-02 08:40:24</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>

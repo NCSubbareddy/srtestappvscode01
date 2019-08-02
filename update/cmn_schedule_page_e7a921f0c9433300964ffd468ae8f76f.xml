@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="cmn_schedule_page">
+    <cmn_schedule_page action="INSERT_OR_UPDATE">
+        <client_script><![CDATA[g_form.addInfoMessage("info is added..")]]></client_script>
+        <description/>
+        <header_html><![CDATA[<div>Test header</div>]]></header_html>
+        <init_function/>
+        <name>schedulepage0123</name>
+        <server_script><![CDATA[var g = new GlideRecord('cmn_schedule');
+g.addQuery('name', 'application');
+g.query();
+
+while (g.next()) {
+    schedulePage.addSchedule(g.sys_id, '#808080', null, true);
+}
+
+g.initialize();
+g.addQuery('name', 'server');
+g.query();
+
+while (g.next()) {
+    schedulePage.addSchedule(g.sys_id, '#73A8F0', null, true);
+}
+
+
+g.initialize();
+g.addQuery('type', 'blackout');
+g.query();
+
+while (g.next()) {
+    schedulePage.addSchedule(g.sys_id, '#000', null, true);
+}
+
+g.initialize();
+g.addQuery('name', 'network');
+g.query();
+
+while (g.next()) {
+    schedulePage.addSchedule(g.sys_id, '#FF6600', null, true);
+}
+
+			//gr = new GlideRecord('change_request');
+			//gr.query();
+			//while (gr.next()) {
+			// var start = gr.start_date.getDisplayValue();
+			// var end = gr.end_date.getDisplayValue();
+			// var item = schedulePage.addItem(gr, start, end, '', '#318047');
+
+			// if (item) {
+			// item.setDescription(gr.short_description.toString());
+			// }
+			//}]]></server_script>
+        <sys_class_name>cmn_schedule_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-08-01 09:32:51</sys_created_on>
+        <sys_id>e7a921f0c9433300964ffd468ae8f76f</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>schedulepage0123</sys_name>
+        <sys_package display_value="srtestApp01" source="x_srtestapp01">b1da4134c9033300964ffd468ae8f732</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="srtestApp01">b1da4134c9033300964ffd468ae8f732</sys_scope>
+        <sys_update_name>cmn_schedule_page_e7a921f0c9433300964ffd468ae8f76f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-08-01 09:39:08</sys_updated_on>
+        <type/>
+        <view_type>Calendar</view_type>
+    </cmn_schedule_page>
+</record_update>
